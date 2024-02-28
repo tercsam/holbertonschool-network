@@ -1,0 +1,3 @@
+#!/bin/bash
+#list all ports
+netstat --listening --program
