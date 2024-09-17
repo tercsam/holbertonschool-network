@@ -13,4 +13,5 @@ sudo cp "$HOSTS_FILE" "${HOSTS_FILE}.bak"
     echo "8.8.8.8     facebook.com"
 } | sudo tee -a "$HOSTS_FILE" > /dev/null
 
-echo "Updated $HOST
+# Notify user of the update
+echo "Updated $HOSTS_FILE with the required entries."
