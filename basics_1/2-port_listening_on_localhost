@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 # Listen on localhost (127.0.0.2) and port 98 using Netcat
 # -k keeps the listener open for multiple connections
