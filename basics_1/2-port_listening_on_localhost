@@ -1,0 +1,9 @@
+#!/bin/bash
+
+# Listen on localhost (127.0.0.2) and port 98 using Netcat
+# -k keeps the listener open for multiple connections
+# -l specifies listen mode
+# -p specifies the port
+# -s specifies the IP address to listen on
+
+nc -k -l -p 98 -s 127.0.0.2
