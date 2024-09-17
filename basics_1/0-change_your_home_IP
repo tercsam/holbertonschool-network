@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 # Define the file to update
 HOSTS_FILE="/etc/hosts"
