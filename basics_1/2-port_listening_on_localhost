@@ -1,9 +1,17 @@
 #!/usr/bin/env bash
 
-# Listen on localhost (127.0.0.2) and port 98 using Netcat
-# -k keeps the listener open for multiple connections
-# -l specifies listen mode
-# -p specifies the port
-# -s specifies the IP address to listen on
+# This script modifies the /etc/hosts file to map localhost to 127.0.0.2 and facebook.com to 8.8.8.8
 
-nc -k -l -p 98 -s 127.0.0.2
+# Define the hosts file to update
+HOSTS_FILE="/etc/hosts"
+
+# Backup the current /etc/hosts file
+sudo cp "$HOSTS_FILE" "${HOSTS_FILE}.bak"
+
+# Add entries to the /etc/hosts file
+{
+    echo "127.0.0.2   localhost"
+    echo "8.8.8.8     facebook.com"
+} | sudo tee -a "$HOSTS_FILE" > /dev/null
+
+echo "Updated $HOST
